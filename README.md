@@ -96,7 +96,7 @@ Available Commands
 
 1. Shorten a URL
 
-shorten <url>
+shorten (url)
 
 Example:
 
@@ -111,7 +111,7 @@ Short code: aB7xK2
 
 2. Resolve a Short Code
 
-resolve <code>
+resolve (code)
 
 Example:
 
