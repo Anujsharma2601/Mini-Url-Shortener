@@ -255,7 +255,7 @@
                 {% for code, data in urls.items() %}
                 <div class="url-item">
                     <div class="url-info">
-                        <a href="{{ request.host_url }}{{ code }}" class="short-url" target="_blank" id="url-{{ code }}">{{ request.host_url }}{{ code }}</a>
+                        <a href="{{ request.host_url }}{{ code }}" class="short-url" target="_blank" id="url-{{ code }}">miniurl/{{ code }}</a>
                         <div class="long-url" title="{{ data.url }}">{{ data.url }}</div>
                     </div>
                     <div class="stats">
