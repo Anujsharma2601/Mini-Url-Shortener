@@ -1,12 +1,12 @@
-# ✂️ Mini URL Shortener 🔗
+#  Mini URL Shortener 🔗
 
-A lightweight URL Shortener built with **Python** and **Flask**. Available as both a **command-line tool** and a **web application**.
+A lightweight URL Shortener built with **Python** and **Flask**. 
 
 The application converts long URLs into short, unique codes, stores the mappings persistently using JSON, and allows users to resolve short codes back to their original URLs.
 
 ---
 
-## ✨ Features
+##  Features
 
 ### Core Features
 
@@ -26,8 +26,8 @@ The application converts long URLs into short, unique codes, stores the mappings
 - 🗑️ Delete shortened URLs (web UI)
 - 🌐 Automatic redirect when visiting a short URL
 - 🎨 Modern, responsive web interface with gradient design
-- 💻 Interactive CLI with help command
-- 🚀 Deployable to cloud platforms (Render, Heroku, Railway)
+
+
 
 ---
 
@@ -41,7 +41,7 @@ The application converts long URLs into short, unique codes, stores the mappings
 | JSON             | Persistent data storage          |
 | HTML/CSS         | Frontend (inline, no frameworks) |
 | JavaScript       | Copy-to-clipboard functionality  |
-| urllib.parse      | URL validation                   |
+| urllib.parse     | URL validation                   |
 
 No external URL-shortening APIs are used. Everything runs locally.
 
@@ -63,51 +63,9 @@ Mini-URL-Shortener/
 └── .gitignore          # Git ignore rules
 ```
 
----
+##  Running the Web Application
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Python 3.8 or higher
-- pip (Python package manager)
-
-### Installation
-
-1. **Clone the repository**
-
-   ```bash
-   git clone https://github.com/Anujsharma2601/Mini-Url-Shortener.git
-   cd Mini-Url-Shortener
-   ```
-
-2. **Create a virtual environment** (recommended)
-
-   ```bash
-   python -m venv venv
-
-   # Windows
-   venv\Scripts\activate
-
-   # macOS/Linux
-   source venv/bin/activate
-   ```
-
-3. **Install dependencies**
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
----
-
-## 🌐 Running the Web Application
-
-```bash
-python app.py
-```
-
-Open your browser and go to: **http://localhost:5000**
+Open your browser and go to: **https://mini-url-shortener-1.onrender.com/**
 
 You'll see a clean, modern interface where you can:
 - Paste a long URL and get a short link instantly
@@ -116,79 +74,6 @@ You'll see a clean, modern interface where you can:
 - Copy short URLs to clipboard
 - Delete URLs you no longer need
 - Click any short URL to be redirected to the original
-
----
-
-## 💻 Running the CLI Application
-
-```bash
-python main.py
-```
-
-### CLI Commands
-
-| Command                                | Description                              |
-| -------------------------------------- | ---------------------------------------- |
-| `shorten <url>`                        | Shorten a URL with a random code         |
-| `shorten <url> --alias <alias>`        | Shorten a URL with a custom alias        |
-| `resolve <code>`                       | Open the original URL in your browser    |
-| `list`                                 | Display all stored URLs and click counts |
-| `help`                                 | Show available commands                  |
-| `exit`                                 | Exit the program                         |
-
-### CLI Examples
-
-```
-> shorten https://www.google.com
-URL shortened successfully!
-Short code: aB7xK2
-
-> shorten https://github.com --alias github
-URL shortened successfully!
-Short code: github
-
-> resolve github
-Original URL: https://github.com
-Total resolutions: 1
-Opening URL in browser...
-
-> list
-=================================================================
-                    STORED URLS
-=================================================================
-Code   : aB7xK2
-URL    : https://www.google.com
-Clicks : 2
------------------------------------------------------------------
-```
-
----
-
-## 🌍 Deploying to the Web (Render)
-
-Deploy your URL shortener to the internet for free using [Render](https://render.com):
-
-### Option 1: One-Click Deploy
-
-1. Push your code to a GitHub repository
-2. Go to [Render Dashboard](https://dashboard.render.com/)
-3. Click **New → Web Service**
-4. Connect your GitHub repo
-5. Render will auto-detect the `render.yaml` blueprint
-6. Click **Deploy** — your app will be live in minutes!
-
-### Option 2: Manual Setup on Render
-
-1. Create a new **Web Service** on Render
-2. Connect your GitHub repository
-3. Set the following:
-   - **Runtime**: Python
-   - **Build Command**: `pip install -r requirements.txt`
-   - **Start Command**: `gunicorn app:app`
-4. Add environment variable: `SECRET_KEY` → generate a random string
-5. Deploy!
-
-Your app will be available at: `https://your-app-name.onrender.com`
 
 ---
 
@@ -214,8 +99,6 @@ Returns all shortened URLs and their metadata:
     }
 }
 ```
-
----
 
 ## 💾 Data Persistence
 
